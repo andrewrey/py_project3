@@ -1,7 +1,6 @@
 import numpy as np
 from PIL import Image
-from square import Square
-from rectangle import Rectangle
+
 
 
 
@@ -21,9 +20,4 @@ class Canvas:
         img.save(filename)
 
 
-my_canvas = Canvas(1000, 1000, [188, 90, 35])
-first_square = Square(0, 0, 500, [30, 55, 90])
-first_square.draw_square(my_canvas)
-first_rectangle = Rectangle(x=0, y=0, length=500, width=50, color=[200, 150, 66])
-first_rectangle.draw_rectangle(my_canvas)
-my_canvas.create_canvas('first_canvas.png')
+
