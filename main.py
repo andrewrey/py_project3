@@ -1,6 +1,7 @@
 from canvas import Canvas
 from square import Square
 from rectangle import Rectangle
+from fileshare import FileSharer
 
 canvas_width = int(input("Enter the width for you canvas: "))
 canvas_height = int(input("Enter the height of your canvas: "))
@@ -26,11 +27,14 @@ while True:
         user_rectangle = Rectangle(x=x_value, y=y_value, length=length_value, width=width_value, colour=user_colour)
         user_rectangle.draw_rectangle(my_canvas)
     else:
+        user_file_name = input("Please provide a filename ")
         break
 
 # first_square = Square(x=0, y=50, side=500, colour=[30, 55, 90])
 # first_square.draw_square(my_canvas)
 # first_rectangle = Rectangle(x=0, y=50, length=500, width=50, color=[200, 150, 66])
 # first_rectangle.draw_rectangle(my_canvas)
-my_canvas.create_canvas('first_canvas.png')
-print(my_canvas.colour)
+my_canvas.create_canvas(f'{user_file_name}.png')
+shared_png = FileSharer(filepath=f'{user_file_name}.png')
+print(shared_png.upload())
+
