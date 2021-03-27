@@ -3,8 +3,6 @@ from PIL import Image
 from colour import Color
 
 
-
-
 class Canvas:
     def __init__(self, height, width, colour):
         colours_rgb = list(Color(colour).rgb)
@@ -21,6 +19,3 @@ class Canvas:
     def create_canvas(self, filename):
         img = Image.fromarray(self.data, 'RGB')
         img.save(filename)
-
-
-
