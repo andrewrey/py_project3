@@ -17,6 +17,14 @@ while True:
         user_colour = input('Enter your square colour ')
         user_square = Square(x=x_value, y=y_value, side=side_value, colour=user_colour)
         user_square.draw_square(my_canvas)
+    elif user_choice == 'rectangle':
+        x_value = int(input('Enter x value for start point  '))
+        y_value = int(input('Enter y value for starting point '))
+        length_value = int(input('Enter the length of rectangle '))
+        width_value = int(input('Enter the width of rectangle '))
+        user_colour = input('Enter your rectangle colour ')
+        user_rectangle = Rectangle(x=x_value, y=y_value, length=length_value, width=width_value, colour=user_colour)
+        user_rectangle.draw_rectangle(my_canvas)
     else:
         break
 
